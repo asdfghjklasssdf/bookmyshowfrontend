@@ -1,0 +1,122 @@
+.movie-page {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* HERO SECTION */
+.hero {
+  position: relative;
+}
+
+/* Banner */
+.banner {
+  position: relative;
+}
+
+.banner img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* White transparent layer */
+.banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(3px);
+  border-radius: 12px;
+}
+
+/* Movie info ON banner */
+.movie-info {
+  position: absolute;
+  bottom: 20px;
+  left: 25px;
+  display: flex;
+  gap: 25px;
+  align-items: flex-end;
+  z-index: 2;
+  color: white;
+}
+
+.poster {
+  width: 220px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+.info {
+  flex: 1;
+}
+
+.book-btn {
+  margin-top: 15px;
+  padding: 12px 25px;
+  background: #f84464;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Description */
+.description {
+  margin-top: 40px;
+}
+
+/* Cast */
+.cast-list {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.cast-card {
+  width: 140px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.cast-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Similar */
+.similar-list {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+}
+
+.similar-card {
+  min-width: 150px;
+  height: 220px;
+  background: #f2f2f2;
+  border-radius: 10px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .movie-info {
+    position: static;
+    margin-top: 15px;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+  }
+
+  .banner img {
+    height: 250px;
+  }
+
+  .poster {
+    width: 180px;
+  }
+}

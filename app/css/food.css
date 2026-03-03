@@ -1,0 +1,68 @@
+/* Page */
+.food-page {
+  padding: 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.food-title {
+  margin-bottom: 25px;
+}
+
+/* Food grid */
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Card */
+.food-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.food-card h2 {
+  margin-bottom: 10px;
+}
+
+.food-card p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Add button */
+.add-food-btn {
+  margin-top: 12px;
+  padding: 10px 16px;
+  background: #f84464;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.add-food-btn:hover {
+  background: #f84464;
+}
+
+/* Selected area */
+.selected-food {
+  margin-top: 25px;
+  padding: 15px;
+  background: #f6f6f6;
+  border-radius: 10px;
+}
+
+/* Continue button */
+.continue-btn {
+  margin-top: 20px;
+  padding: 12px 24px #f84464;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}

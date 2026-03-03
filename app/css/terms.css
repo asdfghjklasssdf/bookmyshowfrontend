@@ -1,0 +1,75 @@
+/* Page */
+.terms-page {
+  padding: 30px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Card */
+.terms-card {
+  max-width: 700px;
+  margin: auto;
+  background: var(--card-bg);
+  border-radius: 14px;
+  padding: 30px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 6px 20px var(--nav-shadow);
+  transition: all 0.3s ease;
+}
+
+/* Title */
+.terms-title {
+  font-size: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: var(--foreground);
+  transition: color 0.3s ease;
+}
+
+/* List */
+.terms-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.terms-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 16px;
+  color: var(--foreground);
+}
+
+/* Button */
+.terms-btn {
+  margin-top: 25px;
+  width: 100%;
+  padding: 14px;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.terms-btn:hover {
+  background: var(--btn-hover);
+}
+
+.terms-btn:hover {
+  background: #f84464;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .terms-card {
+    padding: 20px;
+  }
+
+  .terms-title {
+    font-size: 24px;
+  }
+}

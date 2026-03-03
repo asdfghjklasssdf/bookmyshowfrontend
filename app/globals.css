@@ -1,26 +1,153 @@
 @import "tailwindcss";
 
+/* ===== LIGHT MODE ===== */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+--background: #f8fafc;
+  --foreground: #111827;
+
+  --card-bg: rgba(255,255,255,0.88);
+  --input-bg: #f9fafb;
+  --border-color: #d1d5db;
+
+  --primary: #f84464;
+  --primary-hover: #ff2d55;
+
+  --hero-text: #111827;
+  --hero-subtext: #374151;
+
+  --overlay-1: rgba(255,255,255,0.68);
+  --overlay-2: rgba(255,255,255,0.42);
+  --overlay-3: rgba(255,255,255,0.18);
+
+
+  --payment-bg: #f5f5f5;
+  --payment-card-bg: #ffffff;
+  --payment-text: #111827;
+  --payment-subtext: #666;
+  --payment-border: #ddd;
+  --payment-input-bg: #ffffff;
+   --hero-text: #111827;    /* light mode */
+  --hero-subtext: #1f2937;
+  --contact-bg: #f5f5f5;
+  --contact-card-bg: #ffffff;
+  --contact-text: #111827;
+  --contact-subtext: #666;
+  --contact-input-bg: #ffffff;
+  --contact-input-border: #ddd;
+ --success-bg: #f5f5f5;
+  --success-card-bg: #ffffff;
+  --success-text: #111827;
+  --success-subtext: #666;
+  --success-green: #1a7f37;
+    --nav-bg: #ffffff;
+  --nav-text: #111827;
+  --nav-link: #6b21a8;
+  --nav-link-hover: #3b82f6;
+  --nav-shadow: rgba(0,0,0,0.05);
+
+
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+.dark {
+  --background: #050916;
+  --foreground: #ffffff;
+  --card-bg: rgba(10,16,34,0.95);
+  --input-bg: #111827;
+  --border-color: #2b3145;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+  --primary: #ff4c78;
+  --primary-hover: #ff2b63;
 
-body {
-  background: var(--background);
+   --hero-text: #ffffff; 
+  --hero-subtext: #e2e8f0;
+
+
+  --overlay-1: rgba(255,255,255,0.55);
+  --overlay-2: rgba(255,255,255,0.40);
+  --overlay-3: rgba(255,255,255,0.25);
+    --contact-bg: #050916;
+  --contact-card-bg: rgba(10,16,34,0.95);
+  --contact-text: #ffffff;
+  --contact-subtext: #b8c0d9;
+  --contact-input-bg: #111827;
+  --contact-input-border: #2b3145;
+   --success-bg: #050916;
+  --success-card-bg: rgba(10,16,34,0.95);
+  --success-text: #ffffff;
+  --success-subtext: #b8c0d9;
+  --success-green: #4ade80;
+    --payment-bg: #050916;
+  --payment-card-bg: rgba(10,16,34,0.95);
+  --payment-text: #ffffff;
+  --payment-subtext: #b8c0d9;
+  --payment-border: #2b3145;
+  --payment-input-bg: #111827;
+ --nav-bg: #0b1220;
+  --nav-text: #ffffff;
+  --nav-link: #c4b5fd;
+  --nav-link-hover: #60a5fa;
+  --nav-shadow: rgba(0,0,0,0.35);
+ 
+}
+h1 {
+  font-size: 32px;
+  font-weight: 700;
   color: var(--foreground);
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  transition: all 0.3s ease;
+}
+
+
+.last-overlay h2 {
+  color: var(--primary);  
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    var(--overlay-1),
+    var(--overlay-2),
+    var(--overlay-3)
+  );
+  z-index: 1;
+}
+.hero-text {
+  position: absolute;
+  left: 80px;
+  bottom: 100px;
+  z-index: 3;
+  max-width: 500px;
+}
+
+.hero-text h2 {
+  font-size: 52px;
+  margin-bottom: 10px;
+  color: var(--hero-text);
+}
+
+.hero-text p {
+  font-size: 30px;
+  color: var(--hero-subtext);
+}
+:root {
+  --btn-bg: #f84464;
+  --btn-hover: #ff2d55;
+  --btn-text: white;
+}
+
+.dark {
+  --btn-bg: #ff4c78;
+  --btn-hover: #ff2b63;
+  --btn-text: white;
 }

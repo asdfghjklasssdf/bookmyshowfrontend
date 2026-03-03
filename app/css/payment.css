@@ -1,0 +1,86 @@
+.payment-page {
+  min-height: 100vh;
+  background: var(--payment-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.3s ease;
+}
+
+.payment-card {
+  width: 100%;
+  max-width: 500px;
+  margin: 50px auto;
+  background: var(--payment-card-bg);
+  padding: 30px;
+  border-radius: 14px;
+  border: 1px solid var(--payment-border);
+
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  backdrop-filter: blur(12px);
+
+  color: var(--payment-text);
+}
+
+.subtitle {
+  color: var(--payment-subtext);
+  margin-bottom: 20px;
+}
+
+/* payment options */
+.payment-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.payment-option {
+  border: 1px solid var(--payment-border);
+  background: var(--payment-input-bg);
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: var(--payment-text);
+}
+
+/* form inputs */
+.pay-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid var(--payment-border);
+  border-radius: 8px;
+  background: var(--payment-input-bg);
+  color: var(--payment-text);
+}
+
+.pay-input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+/* button */
+.pay-btn {
+  width: 100%;
+  padding: 12px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.pay-btn:hover {
+  background: var(--primary-hover);
+}

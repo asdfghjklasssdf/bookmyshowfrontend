@@ -1,0 +1,55 @@
+/* Page */
+.show-page {
+  padding: 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.show-title {
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+/* Show cards */
+.shows-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.show-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 20px;
+  min-width: 220px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.time-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.show-btn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+/* Timing button */
+.show-btn {
+  margin-top: 12px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #f84464;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.show-btn:hover {
+  background: #f84464;
+}

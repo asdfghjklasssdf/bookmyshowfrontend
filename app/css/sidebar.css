@@ -1,0 +1,49 @@
+.boardLayout {
+  display: flex;
+  height: calc(100vh - 80px);
+}
+
+.boardSidebar {
+  width: 240px;
+  background: #1e293b;
+  color: #fff;
+  padding: 20px;
+  overflow-y: auto;
+}
+.boardSidebar {
+  width: 260px;
+  flex-shrink: 0;
+  transition: width 0.25s ease;
+}
+
+.boardSidebar.closed {
+  width: 0;
+  overflow: hidden;
+  padding: 0;
+}
+.sidebarTitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.sidebarBoardList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebarBoardItem {
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.sidebarBoardItem:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.sidebarBoardItem.active {
+  background: #7c3aed;
+}
