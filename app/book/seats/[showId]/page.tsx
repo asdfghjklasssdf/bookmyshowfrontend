@@ -64,13 +64,14 @@ grouped[row].push({
 grouped[row].push({
   id: seatKey,
   number: seat.number || seatKey.split("-")[1],
+  type: seat.type, 
   isSelected: false,
   isReserved: isLocked || isBooked,
   tooltip: isBooked
-    ? "Booked"
+    ? `Booked (${seat.type})`
     : isLocked
-    ? "Locked"
-    : seatKey,
+    ? `Locked (${seat.type})`
+    : `${seatKey} (${seat.type})`,
 });
 });
 const formattedRows = Object.entries(grouped).map(
@@ -124,13 +125,16 @@ useEffect(() => {
     return;
   }
 
-  await api("/selected-seats/select", {
-    method: "POST",
-    body: JSON.stringify({
-      showId,
-      seatKey: selected,
-    }),
-  });
+await api("/selected-seats/select", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    showId,
+    seatKey: selected,
+  }),
+});
 
   setBooking((prev: any) => ({
     ...prev,

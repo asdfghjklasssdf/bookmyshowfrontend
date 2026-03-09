@@ -7,7 +7,6 @@
   transition: 0.3s ease;
 }
 
-/* Card */
 .contact-card {
   width: 100%;
   max-width: 420px;
@@ -20,7 +19,6 @@
   color: var(--contact-text);
 }
 
-/* Title */
 .contact-card h1 {
   margin-bottom: 8px;
   font-size: 26px;
@@ -32,7 +30,6 @@
   margin-bottom: 20px;
 }
 
-/* Inputs */
 .contact-input {
   width: 100%;
   padding: 12px;
@@ -49,7 +46,6 @@
   border-color: var(--primary);
 }
 
-/* Button */
 .continue-btn {
   width: 100%;
   padding: 12px;

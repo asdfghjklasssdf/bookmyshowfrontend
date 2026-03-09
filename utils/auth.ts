@@ -3,5 +3,19 @@ export const isLoggedIn = (): boolean => {
 
   const token = localStorage.getItem("accessToken");
 
-  return !!token; // true only if token exists
+  return !!token; 
+};
+
+export const isAdmin = (): boolean => {
+  if (typeof window === "undefined") return false;
+
+  const token = localStorage.getItem("accessToken");
+  if (!token) return false;
+
+  try {
+    const payload = JSON.parse(atob(token.split(".")[1]));
+    return payload.role === "admin";
+  } catch {
+    return false;
+  }
 };

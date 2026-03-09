@@ -14,9 +14,27 @@ export default function SeatLayout({
   addSeatCallback,
   removeSeatCallback,
 }: SeatLayoutProps) {
-return (
+return (<>
+      <div className="seat-type silver">
+    Silver ₹150
+  </div>
+
+  <div className="seat-type gold">
+    Gold ₹250
+  </div>
+
+  <div className="seat-type platinum">
+    Platinum ₹350
+  </div>
   <div className="theatre-container">
+    
     <div className="seat-picker-wrapper">
+  
+      <div className="seat-types">
+
+  
+
+</div>
 <SeatPicker
   rows={rows}
   addSeatCallback={addSeatCallback}
@@ -29,5 +47,6 @@ return (
 />
     </div>
   </div>
+  </>
 );
 }

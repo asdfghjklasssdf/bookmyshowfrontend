@@ -32,6 +32,10 @@ export const loginUser = async (data: AuthPayload) => {
     body: JSON.stringify(data),
   });
 
+  if (!res || !res.accessToken) {
+    throw new Error("Login failed");
+  }
+
   localStorage.setItem("accessToken", res.accessToken);
   localStorage.setItem("refreshToken", res.refreshToken);
   localStorage.setItem("loggedInUser", JSON.stringify(res.user));

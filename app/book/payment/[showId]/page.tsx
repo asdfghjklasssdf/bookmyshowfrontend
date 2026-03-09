@@ -53,7 +53,6 @@ return (
       <h1>💳 Payment</h1>
       <p className="subtitle">Choose your payment method</p>
 
-      {/* Payment Methods */}
       <div className="payment-methods">
 
         <label className="payment-option">
@@ -78,7 +77,6 @@ return (
 
       </div>
 
-      {/* Card Inputs (UI only) */}
       <div className="card-form">
         <input className="pay-input" placeholder="Card Number" />
         <input className="pay-input" placeholder="Card Holder Name" />
@@ -94,7 +92,6 @@ return (
       </button>
     </div>
 
-    {/* FOOTER SAME */}
     <footer className="footer">
       <div className="footer-top">
 

@@ -5,12 +5,38 @@
   font-family: Arial;
 }
 
-/* HERO SECTION */
 .hero {
   position: relative;
 }
+.rating-section{
+margin-top:40px;
+}
 
-/* Banner */
+.rating-stars span{
+margin-right:5px;
+}
+
+.rating-section textarea{
+width:100%;
+height:80px;
+margin-top:10px;
+padding:8px;
+}
+
+.rating-section button{
+margin-top:10px;
+padding:8px 16px;
+background:#ff3d3d;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+.review-card{
+margin-top:15px;
+padding:10px;
+border-bottom:1px solid #ddd;
+}
 .banner {
   position: relative;
 }
@@ -22,7 +48,6 @@
   border-radius: 12px;
 }
 
-/* White transparent layer */
 .banner-overlay {
   position: absolute;
   inset: 0;
@@ -31,7 +56,6 @@
   border-radius: 12px;
 }
 
-/* Movie info ON banner */
 .movie-info {
   position: absolute;
   bottom: 20px;
@@ -63,12 +87,10 @@
   cursor: pointer;
 }
 
-/* Description */
 .description {
   margin-top: 40px;
 }
 
-/* Cast */
 .cast-list {
   display: flex;
   gap: 15px;
@@ -88,7 +110,6 @@
   border-radius: 8px;
 }
 
-/* Similar */
 .similar-list {
   display: flex;
   gap: 15px;
@@ -102,7 +123,6 @@
   border-radius: 10px;
 }
 
-/* MOBILE */
 @media (max-width: 768px) {
   .movie-info {
     position: static;

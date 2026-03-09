@@ -22,7 +22,9 @@ export default function LoginPage() {
       await loginUser({ email, password });
       router.push("/dashboard");
     } catch (err: unknown) {
-      if (err instanceof Error) setError(err.message);
+      if (err instanceof Error) {console.log(err.message) 
+        setError(err.message);}
+      
     }
   };
 useEffect(() => {
@@ -86,6 +88,15 @@ useEffect(() => {
         <p className="signuplink">
           Don’t have account? <Link href="/signup">Signup</Link>
         </p>
+        <button
+  type="button"
+  className="google-btn"
+  onClick={() =>
+    (window.location.href = "http://localhost:4000/auth/google")
+  }
+>
+  Continue with Google
+</button>
       </div>
     </div>
   );

@@ -7,4 +7,7 @@ export const createBooking=(data:any)=>
     body: JSON.stringify(data),
   });
 
+
+export const getMyBookings = () =>
+  api("/bookings/my-bookings");
 export const getBookings=()=>api("/bookings");

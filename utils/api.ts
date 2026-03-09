@@ -1,5 +1,4 @@
 const API_URL = process.env.NEXT_PUBLIC_API_URL;
-
 export const api = async (
   endpoint: string,
   options: RequestInit = {}
@@ -9,7 +8,9 @@ export const api = async (
   const response = await fetch(`${API_URL}${endpoint}`, {
     ...options,
     headers: {
-      "Content-Type": "application/json",
+      ...(options.body instanceof FormData
+        ? {}
+        : { "Content-Type": "application/json" }),
       ...(token && { Authorization: `Bearer ${token}` }),
       ...options.headers,
     },
@@ -18,7 +19,8 @@ export const api = async (
   if (response.status === 401) {
     localStorage.removeItem("accessToken");
     window.location.href = "/login";
-    return;
+    throw new Error("Unauthorized");
+
   }
 
   const data = await response.json();

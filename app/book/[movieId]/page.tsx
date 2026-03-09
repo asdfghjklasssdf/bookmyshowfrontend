@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
@@ -45,7 +46,6 @@ export default function ShowSelection() {
   if (loading)
     return <h2 style={{ padding: 20 }}>Loading shows...</h2>;
 
-  /* 🔥 GROUP BY THEATRE ID (NOT NAME) */
   const groupedShows = shows.reduce((acc: any, show: any) => {
     const theatreKey =
       show.theatreId?._id || show.theatreId;
@@ -100,7 +100,6 @@ export default function ShowSelection() {
 
       </div>
 
-      {/* FOOTER */}
       <footer className="footer">
         <div className="footer-top">
 

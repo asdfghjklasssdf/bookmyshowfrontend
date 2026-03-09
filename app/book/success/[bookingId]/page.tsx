@@ -49,7 +49,6 @@ return (
       </button>
     </div>
 
-    {/* FOOTER (same as yours) */}
     <footer className="footer">
       <div className="footer-top">
 

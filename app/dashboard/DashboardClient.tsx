@@ -102,7 +102,8 @@ export default function Dashboard() {
   const router = useRouter();
   const [index, setIndex] = useState(0);
     const [dark, setDark] = useState(false);
-
+const [search, setSearch] = useState("");
+const [shows, setShows] = useState<any[]>([]);
 const [movies, setMovies] = useState<any[]>([]);
 useEffect(() => {
   const timer = setInterval(() => {
@@ -120,18 +121,29 @@ useEffect(() => {
 
   fetchMovies();
 }, []); 
-  const nextSlide = () =>
+
+const searchMovies = async () => {
+  if (!search) return;
+
+  const res = await fetch(
+    `http://localhost:4000/filters/shows?movieName=${search}`
+  );
+
+  const data = await res.json();
+
+  setShows(data);
+};
+
+const nextSlide = () =>
     setIndex((prev) => (prev + 1) % slides.length);
 const handleLogout = async () => {
   try {
     await logoutUser();
 
-    // clear local storage
     localStorage.removeItem("accessToken");
     localStorage.removeItem("refreshToken");
     localStorage.removeItem("loggedInUser");
 
-    // redirect to login
     router.push("/login");
   } catch (err) {
     console.error("Logout failed");
@@ -151,7 +163,18 @@ const handleLogout = async () => {
 
       <header className="home-header">
         <h1 className="logo">🎬 BookMyShow</h1>
-
+  <input
+    type="text"
+    placeholder="Search movie, cast, crew..."
+    value={search}
+    onChange={(e) => setSearch(e.target.value)}
+    onKeyDown={(e) => {
+      if (e.key === "Enter") {
+        searchMovies();
+      }
+    }}
+    className="search-box"
+  />
 <IconButton onClick={handleToggle} color="inherit">
       {dark ? <LightModeIcon /> : <DarkModeIcon />}
     </IconButton>
@@ -187,20 +210,29 @@ const handleLogout = async () => {
   <h2>🔥 Trending Now</h2>
 
   <div className="horizontal-scroll">
-    {movies.map((movie) => (
-      <div
-        key={movie._id}
-        className="cricket-card"
-        onClick={() => router.push(`/movies/${movie._id}`)}
-      >
-        <img
-          src={movie.posterUrl || "/imagefrst.png"}
-          alt={movie.name}
-          className="movie-img"
-        />
-        <h3>{movie.name}</h3>
-      </div>
-    ))}
+    {
+  Array.from(
+    new Map(
+      (shows.length > 0 ? shows : movies).map((item: any) => {
+        const data = shows.length > 0 ? item.movieId : item;
+        return [data._id, data];
+      })
+    ).values()
+  ).map((data: any) => (
+    <div
+      key={data._id}
+      className="cricket-card"
+      onClick={() => router.push(`/movies/${data._id}`)}
+    >
+      <img
+        src={data.posterUrl || "/imagefrst.png"}
+        alt={data.name}
+        className="movie-img"
+      />
+      <h3>{data.name}</h3>
+    </div>
+  ))
+}
   </div>
 </section>
       <section className="movies-section">

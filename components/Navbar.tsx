@@ -14,7 +14,6 @@ export default function Navbar() {
   const [darkMode, setDarkMode] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  // check theme + auth
   useEffect(() => {
     const isDark =
       document.documentElement.classList.contains("dark");

@@ -401,7 +401,7 @@ textarea {
 
 .dark .cardLeft h4,
 .dark .cardRight h4 {
-  color: #ffffff;  /* ✅ FIX invisible headings */
+  color: #ffffff;  
 }
 
 .dark textarea,

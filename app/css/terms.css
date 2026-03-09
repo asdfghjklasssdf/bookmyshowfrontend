@@ -1,11 +1,9 @@
-/* Page */
 .terms-page {
   padding: 30px 20px;
   max-width: 1100px;
   margin: auto;
 }
 
-/* Card */
 .terms-card {
   max-width: 700px;
   margin: auto;
@@ -17,7 +15,6 @@
   transition: all 0.3s ease;
 }
 
-/* Title */
 .terms-title {
   font-size: 30px;
   margin-bottom: 20px;
@@ -26,7 +23,6 @@
   transition: color 0.3s ease;
 }
 
-/* List */
 .terms-list {
   list-style: none;
   padding: 0;
@@ -40,7 +36,6 @@
   color: var(--foreground);
 }
 
-/* Button */
 .terms-btn {
   margin-top: 25px;
   width: 100%;
@@ -63,7 +58,6 @@
   background: #f84464;
 }
 
-/* Mobile */
 @media (max-width: 768px) {
   .terms-card {
     padding: 20px;
